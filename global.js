@@ -1,0 +1,4 @@
+module.exports={
+    "loggedIn":true,
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7IkZpbmUiOjAsIl9pZCI6IjVmNzA5ZDNkNWE3ZTNjMDAxNzcwYzFkNSIsIm5hbWUiOiJhYWEiLCJ1c2VybmFtZSI6ImFhYSIsImVtYWlsIjoiIiwiRE9CIjoiMjAyMC0wOS0xMFQwMDowMDowMC4wMDBaIiwicm9sbG5vIjoiMTIzIiwiX192IjowfSwiaWF0IjoxNjAyNjU4OTQwfQ.aME29GPBHvpYGlfDzHvnuMED-_aQjxOU6iUb8wTjwUo"
+}

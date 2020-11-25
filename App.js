@@ -1,17 +1,24 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
+import React,{useEffect} from 'react';
+import { ScrollView,View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { BottomNavigation, Text } from 'react-native-paper';
+
+import Navbar from './Screens/Navbar';
+import LoggedOut from './Screens/LoggedOut';
+
+
 
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <ScrollView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home!</Text>
-    </View>
+    </ScrollView>
   );
 }
 
-function SettingsScreen() {
+
+function ProfileScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Settings!</Text>
@@ -19,15 +26,18 @@ function SettingsScreen() {
   );
 }
 
+
+
+
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+
+    const [loggedIn,setLogin]=React.useState(false)
+
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+      loggedIn?
+   <Navbar login={setLogin} />:<LoggedOut login={setLogin}/>
   );
 }
